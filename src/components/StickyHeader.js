@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { FixedMenu, StartingMenu, MenuItemSection, MenuTitleStarting, MenuTitle, MenuItemStarting, MenuItem, Small, Medium, Large } from "../styledComponents";
 import { BrowserRouter, withRouter } from "react-router-dom";
 
-const StickyHeader = () => {
+const StickyHeader = (props) => {
     const [isSticky, setSticky] = useState(false);
     const ref = useRef(null);
     const handleScroll = () => {
@@ -18,6 +18,10 @@ const StickyHeader = () => {
             window.removeEventListener('scroll', () => handleScroll);
         };
     }, []);
+
+    const navigateHome = () => {
+        props.history.push("/home");
+    }
 
     const createFixedMenu = () => {
         return (
@@ -36,7 +40,7 @@ const StickyHeader = () => {
     const startingMenu = () => {
         return (
             <StartingMenu>
-                <MenuTitleStarting><b><a href="/home">BLM</a></b></MenuTitleStarting>
+                <MenuTitleStarting onClick={navigateHome}>BLM</MenuTitleStarting>
                 <MenuItemSection>
                     <MenuItemStarting href="/donate">Donate</MenuItemStarting>
                     <MenuItemStarting>Contact</MenuItemStarting>

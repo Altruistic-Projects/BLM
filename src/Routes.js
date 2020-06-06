@@ -1,12 +1,19 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import { Home, Donate } from "./pages";
 
 const Routes = () => (
     <Switch>
-        <Route path="/home" component={Home}/>
-        <Route path="/donate" component={Donate}/>
+        <Route
+            exact
+            path="/"
+            render={() => {
+                return <Redirect to="/home" />
+            }}
+        />
+        <Route path="/home" component={Home} />
+        <Route path="/donate" component={Donate} />
     </Switch>
 )
 

@@ -1,3 +1,5 @@
 import StickyHeader from "./StickyHeader";
+import Hero from "./Hero";
+import Button from "./Button";
 
-export { StickyHeader };
+export { StickyHeader, Hero, Button };

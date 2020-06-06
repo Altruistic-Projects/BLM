@@ -6,15 +6,78 @@ export const Row = styled.div`
     width: 100%;
 `
 
-export const Hero = styled.div`
+/** MENU STUFF */
+
+export const HeroBody = styled.div`
     background: black;
-    width: 100%;
-    height: 500px;
+    height: 100vh;
+    text-align: center;
 `
+
+export const HeroTitle = styled.span`
+    color: white;
+    font-weight: bolder;
+    font-size: 90px;
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: 479px) {
+        font-size: 70px;
+    }
+`
+
+export const HeroSummary = styled.span`
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+
+    @media only screen and (max-width: 479px) {
+        top: 50%;
+        width: 300px;
+    }
+
+`
+
+
 export const Hero2 = styled.div`
     background: white;
     width: 100%;
     height: 5000px;
+`
+
+/** BUTTON STUFF */
+
+export const HeroButtonBody = styled.div`
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+`
+
+export const HeroButtonContainer = styled.div`
+    font-size: 20px;
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+
+    @media only screen and (max-width: 479px) {
+        top: 65%;
+        width: 200px;
+    }
 `
 
 /** MENU STUFF */
@@ -47,27 +110,24 @@ export const MenuTitleStarting = styled.div`
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-weight: bolder;
 `
 
-export const MenuTitle = styled.div`
-    float: left;
+export const MenuTitle = styled(MenuTitleStarting)`
     color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
 `
 
 export const MenuItemStarting = styled.a`
+    pointer-events: none;
     color: white;
     text-align: center;
     padding: 5px;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 14px 5px;
     visibility: hidden;
-    &:hover {
-        text-decoration: underline;
-    }
+    // &:hover {
+    //     text-decoration: underline;
+    // }
 `
 
 export const MenuItem = styled(MenuItemStarting)`
@@ -101,11 +161,13 @@ export const MenuItemSection = styled.div`
         visibility: visible;
         padding: 14px 5px;
         color: black;
+        pointer-events: auto;
     }
 
     &:active,
     &:hover ${MenuItemStarting} {
         visibility: visible;
+        pointer-events: auto;
     }
 `
 
