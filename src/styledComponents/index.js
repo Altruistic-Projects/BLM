@@ -59,24 +59,27 @@ export const Hero2 = styled.div`
 
 export const HeroButtonBody = styled.div`
     color: white;
-    border: 1px solid white;
+    border: 2px solid white;
+    text-align: center;
     padding: 10px;
     border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 2px 2px 9px -2px rgba(255,255,255,1);
 `
 
 export const HeroButtonContainer = styled.div`
     font-size: 20px;
     margin: 0;
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    width: 550px;
 
     @media only screen and (max-width: 479px) {
-        top: 65%;
-        width: 200px;
+        top: 70%;
+        width: 250px;
     }
 `
 
@@ -125,13 +128,22 @@ export const MenuItemStarting = styled.a`
     text-decoration: none !important;
     font-size: 14px 5px;
     visibility: hidden;
-    // &:hover {
-    //     text-decoration: underline;
-    // }
+    &:hover {
+        text-decoration: underline;
+    }
 `
 
 export const MenuItem = styled(MenuItemStarting)`
     color: black;
+`
+
+export const PlaceHolderBlock = styled.div`
+    height: 100px;
+    transition: height 0.5s ease-in-out;
+    &:active,
+    &:hover {
+        height: 0px;
+    }
 `
 
 export const MenuItemSection = styled.div`
@@ -144,7 +156,7 @@ export const MenuItemSection = styled.div`
     border-radius: 50px;
     box-shadow: 1px -1px 5px 4px rgba(0,0,0,0.21);
     margin-right: 20px;
-    transition: width 1s ease-in-out;
+    transition: width 0.5s ease-in-out;
     width: 20px;
     height: 20px;
 
@@ -169,6 +181,7 @@ export const MenuItemSection = styled.div`
         visibility: visible;
         pointer-events: auto;
     }
+
 `
 
 export const MenuItemSectionStarting = styled(MenuItemSection)`

@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
-import { FixedMenu, StartingMenu, MenuItemSection, MenuTitleStarting, MenuTitle, MenuItemStarting, MenuItem, Small, Medium, Large } from "../styledComponents";
+import { FixedMenu, StartingMenu, MenuItemSection, MenuTitleStarting, MenuTitle, MenuItemStarting, MenuItem, Small, Medium, Large, PlaceHolderBlock } from "../styledComponents";
 import { BrowserRouter, withRouter } from "react-router-dom";
 
 const StickyHeader = (props) => {
@@ -23,11 +23,18 @@ const StickyHeader = (props) => {
         props.history.push("/home");
     }
 
+    const scrollToTop = () => {
+        window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
+    }
+
+
+
     const createFixedMenu = () => {
         return (
             <FixedMenu>
-                <MenuTitle>BLM</MenuTitle>
+                <MenuTitle onClick={scrollToTop}>BLM</MenuTitle>
                 <MenuItemSection>
+                    <PlaceHolderBlock></PlaceHolderBlock>
                     <MenuItem href="/donate">Donate</MenuItem>
                     <MenuItem>Contact</MenuItem>
                     <MenuItem>Vote</MenuItem>
@@ -40,12 +47,13 @@ const StickyHeader = (props) => {
     const startingMenu = () => {
         return (
             <StartingMenu>
-                <MenuTitleStarting onClick={navigateHome}>BLM</MenuTitleStarting>
+                <MenuTitleStarting onClick={scrollToTop}>BLM</MenuTitleStarting>
                 <MenuItemSection>
+                    <PlaceHolderBlock></PlaceHolderBlock>
                     <MenuItemStarting href="/donate">Donate</MenuItemStarting>
-                    <MenuItemStarting>Contact</MenuItemStarting>
-                    <MenuItemStarting>Vote</MenuItemStarting>
-                    <MenuItemStarting>Remember</MenuItemStarting>
+                    <MenuItemStarting href="/donate">Contact</MenuItemStarting>
+                    <MenuItemStarting href="/donate">Vote</MenuItemStarting>
+                    <MenuItemStarting href="/donate">Remember</MenuItemStarting>
                 </MenuItemSection>
             </StartingMenu>
         )

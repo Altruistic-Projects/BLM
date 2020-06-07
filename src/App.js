@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 import reset from "styled-reset";
 import { ThemeProvider, createGlobalStyle } from "styled-components"
 import { BrowserRouter, withRouter } from "react-router-dom";
@@ -11,7 +12,9 @@ const baseStyles = theme => createGlobalStyle`
   ${reset}
 `
 
+
 function App() {
+  smoothscroll.polyfill();
   baseStyles();
   return (
     <div>
@@ -19,10 +22,13 @@ function App() {
         <BrowserRouter>
           <Hero title="BLACK LIVES MATTER" summary={"This website is a compilation of resources for the Black Lives Matter movement"} />
           <HeroButtonContainer>
-            <Button />
+            <Button text="DONATION LINKS" link="/donate"/>
+            <Button text="DEMAND CHANGE" link="/contact"/>
+            <Button text="REGISTER TO VOTE" link="/vote"/>
+            <Button text="RESOURCES" link="/resources"/>
           </HeroButtonContainer>
           <StickyHeader />
-          <Routes />
+          <Routes/>
         </BrowserRouter>
       </ThemeProvider>
     </div>
