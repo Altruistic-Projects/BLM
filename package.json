@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && s3cmd sync build/* s3://www.blm.earth && echo '🚀  Deployed!'"
   },
   "eslintConfig": {
     "extends": "react-app"

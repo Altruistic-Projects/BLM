@@ -6,18 +6,57 @@ export const Row = styled.div`
     width: 100%;
 `
 
+/** INFO CARD Stuff */
+
+export const InfoCardContent = styled.div`
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+`
+
+export const InfoCardTitle = styled.div`
+    padding: 10px 0 20px 20px;
+`
+
+export const InfoCardBody = styled.div`
+
+    border: 1px solid black;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 2px 2px 9px -2px rgba(255,255,255,1);
+    transition: height 0.5s ease-in-out;
+
+    &:active,
+    &:hover ${InfoCardContent} {
+        display: block;
+    }
+`
+
+export const InfoCardDonateLink = styled.div`
+    float: right;
+    text-decoration: none;
+    color: black;
+    padding: 0px 20px;
+
+`
+
 /** MENU STUFF */
 
 export const HeroBody = styled.div`
     background: black;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     text-align: center;
 `
 
 export const HeroTitle = styled.span`
     color: white;
     font-weight: bolder;
-    font-size: 90px;
+    font-size: 70px;
     margin: 0;
     position: absolute;
     top: 25%;
@@ -26,7 +65,8 @@ export const HeroTitle = styled.span`
     transform: translate(-50%, -50%);
 
     @media only screen and (max-width: 479px) {
-        font-size: 70px;
+        font-size: 65px;
+        top: 27%;
     }
 `
 
@@ -42,7 +82,7 @@ export const HeroSummary = styled.span`
     width: 500px;
 
     @media only screen and (max-width: 479px) {
-        top: 50%;
+        top: 53%;
         width: 300px;
     }
 
@@ -78,7 +118,7 @@ export const HeroButtonContainer = styled.div`
     width: 550px;
 
     @media only screen and (max-width: 479px) {
-        top: 70%;
+        top: 80%;
         width: 250px;
     }
 `
@@ -140,10 +180,6 @@ export const MenuItem = styled(MenuItemStarting)`
 export const PlaceHolderBlock = styled.div`
     height: 100px;
     transition: height 0.5s ease-in-out;
-    &:active,
-    &:hover {
-        height: 0px;
-    }
 `
 
 export const MenuItemSection = styled.div`
@@ -182,6 +218,11 @@ export const MenuItemSection = styled.div`
         pointer-events: auto;
     }
 
+    &:active,
+    &:hover ${PlaceHolderBlock} {
+        height: 0px;
+    }
+
 `
 
 export const MenuItemSectionStarting = styled(MenuItemSection)`
@@ -195,6 +236,13 @@ export const MenuItemSectionStarting = styled(MenuItemSection)`
         border-radius: 15px;
     }
 `
+//** PAGES Stuff */
+
+export const PageBody = styled.div`
+    margin-top: 100px;
+    padding: 20px;
+`
+
 
 //** Mobile Responsive Stuff */
 

@@ -14,6 +14,8 @@ const baseStyles = theme => createGlobalStyle`
 
 
 function App() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
   smoothscroll.polyfill();
   baseStyles();
   return (
