@@ -5,8 +5,8 @@ function Input(props) {
 
     return (
         <InputBody>
-            <label>{props.label}</label>
-            <InputElement onChange={props.onChange} />
+            <label for={props.name}>{props.label}</label>
+            <InputElement onChange={props.onChange} name={props.name} id={props.name} />
         </InputBody>
     );
 }

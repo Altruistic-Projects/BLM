@@ -54,6 +54,10 @@ export const Row = styled.div`
     width: 100%;
 `
 
+export const SectionBody = styled.div`
+    margin-top: 40px;
+`
+
 export const SectionTitle= styled.h3``
 
 export const SectionSummary = styled.div`
@@ -81,6 +85,7 @@ export const InfoCardContent = styled.div`
 `
 
 export const InfoCardTitle = styled.div`
+    color: white;
     padding: 10px 0 20px 20px;
 `
 
@@ -92,6 +97,7 @@ export const InfoCardBody = styled.div`
     margin: 10px 0;
     box-shadow: 2px 2px 9px -2px rgba(255,255,255,1);
     transition: height 0.5s ease-in-out;
+    background-color: black;
 
     &:active,
     &:hover ${InfoCardContent} {
@@ -101,8 +107,8 @@ export const InfoCardBody = styled.div`
 
 export const InfoCardDonateLink = styled.div`
     float: right;
-    text-decoration: none;
-    color: black;
+    text-decoration: underline;
+    color: white;
     padding: 0px 20px;
 
 `
@@ -161,7 +167,9 @@ export const Hero2 = styled.div`
 /** BUTTON STUFF */
 
 export const HeroButtonBody = styled.div`
-    color: white;
+    color: black;
+    background-color: white;
+    font-weight: bolder;
     border: 2px solid white;
     text-align: center;
     padding: 10px;
@@ -263,6 +271,7 @@ export const MenuItemSection = styled.div`
     &:hover {
         width: 250px;
         background-image: none;
+        background-color: white;
         padding: 14px 14px;
         border-radius: 15px;
     }
@@ -294,9 +303,7 @@ export const MenuItemSectionStarting = styled(MenuItemSection)`
 
     &:active,
     &:hover {
-        color: white;
-        width: 200px;
-        border-radius: 15px;
+        background-color: black;
     }
 `
 //** PAGES Stuff */
@@ -310,7 +317,6 @@ export const PageBody = styled.div`
 //** Mobile Responsive Stuff */
 
 export const Small = styled.div`
-    background: blue;
     display: none;
     @media only screen and (max-width: 479px) {
         display: block;
@@ -319,7 +325,6 @@ export const Small = styled.div`
 
 
 export const Medium = styled.div`
-    background: yellow;
     display: none;
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         display: block;
@@ -327,7 +332,6 @@ export const Medium = styled.div`
 `
 
 export const Large = styled.div`
-    background: green;
     display: none;
     @media only screen and (min-width: 768px) {
         display: block;

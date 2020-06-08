@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
-import { CenteredBold, PageTitle, PageBody, PageSummary, PreviewSection, GenericButtonBody } from "../styledComponents";
+import { Small, CenteredBold, PageTitle, PageBody, PageSummary, PreviewSection, GenericButtonBody } from "../styledComponents";
 import { Input } from "../components";
 
 import config from "../config";
@@ -27,8 +27,13 @@ function Contact(props) {
     <PageBody>
       <PageTitle>Demand Change</PageTitle>
       <PageSummary>Contact those in politics to make the changes we need to see</PageSummary>
-      <Input label={"Full Name"} onChange={updateName}/>
-      <Input label={"City, State"} onChange={updateRegion}/>
+      <Input label={"Full Name"} onChange={updateName} name="name"/>
+      <Input label={"City, State"} onChange={updateRegion} name="city" />
+      <Small>
+        <GenericButtonBody href={email.encoded}>
+          Submit
+      </GenericButtonBody>
+      </Small>
       <PreviewSection>
         <CenteredBold>Email Preview</CenteredBold>
         {email.web}

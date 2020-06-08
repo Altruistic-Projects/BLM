@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
-import { FixedMenu, StartingMenu, MenuItemSection, MenuTitleStarting, MenuTitle, MenuItemStarting, MenuItem, Small, Medium, Large, PlaceHolderBlock } from "../styledComponents";
+import { MenuItemSectionStarting, FixedMenu, StartingMenu, MenuItemSection, MenuTitleStarting, MenuTitle, MenuItemStarting, MenuItem, Small, Medium, Large, PlaceHolderBlock } from "../styledComponents";
 import { BrowserRouter, withRouter } from "react-router-dom";
 
 const StickyHeader = (props) => {
@@ -48,13 +48,13 @@ const StickyHeader = (props) => {
         return (
             <StartingMenu>
                 <MenuTitleStarting onClick={scrollToTop}>BLM</MenuTitleStarting>
-                <MenuItemSection>
+                <MenuItemSectionStarting>
                     <PlaceHolderBlock></PlaceHolderBlock>
                     <MenuItemStarting href="/donate">Donate</MenuItemStarting>
                     <MenuItemStarting href="/donate">Contact</MenuItemStarting>
                     <MenuItemStarting href="/donate">Vote</MenuItemStarting>
                     <MenuItemStarting href="/donate">Remember</MenuItemStarting>
-                </MenuItemSection>
+                </MenuItemSectionStarting>
             </StartingMenu>
         )
     }

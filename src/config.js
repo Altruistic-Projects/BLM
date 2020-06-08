@@ -13,26 +13,38 @@ const config = {
     ],
     donationData: [
         {
-            sectionTitle: "Black Lives Matter General Fund",
-            sectionMessage: "This is a summary of the general funds",
+            sectionTitle: "Victim memorial funds",
+            sectionMessage: "Donations will go toward supporting the families of George Floyd, Ahmaud Arbery, James Scurlock, Tony McDade, David McAtee, and Breonna Taylor.",
             organizations: [
                 {
-                    organization: "Black Lives Matter",
+                    organization: "George Floyd Memorial Fund",
                     briefSummary: "A summary of Google",
-                    link: "https://blacklivesmatter.com/"
+                    link: "https://www.gofundme.com/f/georgefloyd"
                 },
                 {
-                    organization: "Black Lives Matter",
+                    organization: "I Run With Maud",
                     briefSummary: "A summary of Google",
-                    link: "https://blacklivesmatter.com/"
+                    link: "https://www.gofundme.com/f/i-run-with-maud"
                 },{
-                    organization: "Black Lives Matter",
+                    organization: "James Scurlock Memorial Fund",
                     briefSummary: "A summary of Google",
-                    link: "https://blacklivesmatter.com/"
+                    link: "https://www.gofundme.com/f/for-james-scurlocks-family"
                 },{
-                    organization: "Black Lives Matter",
+                    organization: "Tony Mcdade Memorial Fund",
                     briefSummary: "A summary of Google",
-                    link: "https://blacklivesmatter.com/"
+                    link: "https://www.gofundme.com/f/in-memory-of-tony-mcdade"
+                },{
+                    organization: "David McAtee Memorial Fund",
+                    briefSummary: "A summary of Google",
+                    link: "https://www.gofundme.com/f/justicefordavidmcatee"
+                },{
+                    organization: "Gianna Floyd Fund",
+                    briefSummary: "A summary of Google",
+                    link: "https://www.gofundme.com/f/gianna-floyd-daughter-of-george-floyd-fund"
+                },{
+                    organization: "Justice for Breonna Taylor",
+                    briefSummary: "A summary of Google",
+                    link: "https://www.gofundme.com/f/9v4q2-justice-for-breonna-taylor"
                 }
             ]
         },

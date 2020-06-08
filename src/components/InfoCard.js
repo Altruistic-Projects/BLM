@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { InfoCardBody, InfoCardContent, InfoCardTitle, InfoCardDonateLink } from "../styledComponents";
 import { BrowserRouter, withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const InfoCard = (props) => {
 
@@ -11,7 +12,7 @@ const InfoCard = (props) => {
     return (
         <InfoCardBody>
             <InfoCardTitle>
-                {props.title}
+                {props.title}  <FontAwesomeIcon icon="info-circle"/>
                 <InfoCardDonateLink onClick={navigateToLink}>Donate Now</InfoCardDonateLink>
             </InfoCardTitle>
             <InfoCardContent>
