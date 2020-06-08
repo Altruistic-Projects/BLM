@@ -1,9 +1,72 @@
 import styled, { css, keyframes } from "styled-components";
 import icon from "../assets/blm-icon.png";
 
+export const CenteredBold = styled.div`
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5px;
+`
+
+export const GenericButtonBody = styled.a`
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 700px;
+    box-shadow: 2px 2px 9px -2px rgba(255,255,255,1);
+    display: block;
+    text-decoration: none;
+
+    @media only screen and (max-width: 479px) {
+        width: 250px;
+    }
+`
+
+export const PreviewSection = styled.p`
+    width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    white-space: pre-line;
+
+    @media only screen and (max-width: 479px) {
+        width: 250px;
+    }
+`
+
+export const InputElement = styled.input`
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+    height: 20px;
+    font-size: 20px;
+`
+
+export const InputBody = styled.div`
+    margin: 0 10px 10px;
+`
+
 export const Row = styled.div`
     background: red;
     width: 100%;
+`
+
+export const SectionTitle= styled.h3``
+
+export const SectionSummary = styled.div`
+    padding: 0 0 10px;
+`
+
+export const PageTitle = styled.h1`
+    text-align: center;
+`
+
+export const PageSummary = styled.p`
+    text-align: center;
+    padding: 0 20px 20px;
 `
 
 /** INFO CARD Stuff */

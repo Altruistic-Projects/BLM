@@ -1,12 +1,42 @@
-import React from 'react';
-import { Row, Small, Medium, Large, Hero, Hero2 } from "../styledComponents";
+import React, { Fragment, useEffect, useRef, useState } from 'react';
+import { CenteredBold, PageTitle, PageBody, PageSummary, PreviewSection, GenericButtonBody } from "../styledComponents";
+import { Input } from "../components";
 
+import config from "../config";
 
-function Contact() {
+function Contact(props) {
+
+  const [name, setName] = useState("[FULL NAME]");
+  const [region, setRegion] = useState("[CITY, STATE]");
+
+  const email = config.emailGenerator("DEFUNDLAPD", name, region);
+
+  const updateName = (input) => {
+    setName(input.target.value);
+  }
+
+  const updateRegion = (input) => {
+    setRegion(input.target.value);
+  }
+
+  const createEmail = () => {
+
+  }
+
   return (
-    <div>
-      <Hero2>Contact</Hero2>
-    </div>
+    <PageBody>
+      <PageTitle>Demand Change</PageTitle>
+      <PageSummary>Contact those in politics to make the changes we need to see</PageSummary>
+      <Input label={"Full Name"} onChange={updateName}/>
+      <Input label={"City, State"} onChange={updateRegion}/>
+      <PreviewSection>
+        <CenteredBold>Email Preview</CenteredBold>
+        {email.web}
+      </PreviewSection>
+      <GenericButtonBody href={email.encoded}>
+        Submit
+      </GenericButtonBody>
+    </PageBody>
   );
 }
 
