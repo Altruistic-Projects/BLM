@@ -338,3 +338,16 @@ export const Large = styled.div`
 
     }
 `
+export const DropDownBody = styled.div`
+    width: calc(100% - 10px);
+    margin: 35px 0;
+    height: 25px;
+    padding: 5px 0 0 10px;
+`
+
+export const CustomSelect = styled.select`
+    width: 100%;
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 5px 0;
+`
