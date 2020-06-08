@@ -27,6 +27,13 @@ const StickyHeader = (props) => {
         window.scrollTo({left: 0, top: 0, behavior: 'smooth'});
     }
 
+    const navigateTo = (link) => {
+        return () => {
+            window.scrollBy({left: 0, top: window.innerHeight, behavior: 'smooth'});
+            props.history.push(link);
+        }
+    }
+
 
 
     const createFixedMenu = () => {
@@ -35,10 +42,10 @@ const StickyHeader = (props) => {
                 <MenuTitle onClick={scrollToTop}>BLM</MenuTitle>
                 <MenuItemSection>
                     <PlaceHolderBlock></PlaceHolderBlock>
-                    <MenuItem href="/donate">Donate</MenuItem>
-                    <MenuItem>Contact</MenuItem>
-                    <MenuItem>Vote</MenuItem>
-                    <MenuItem>Remember</MenuItem>
+                    <MenuItem onClick={navigateTo("/donate")}>Donate</MenuItem>
+                    <MenuItem onClick={navigateTo("/demand")}>Demand</MenuItem>
+                    <MenuItem onClick={navigateTo("/vote")}>Vote</MenuItem>
+                    <MenuItem onClick={navigateTo("/remember")}>Remember</MenuItem>
                 </MenuItemSection>
             </FixedMenu>
         )
@@ -50,10 +57,10 @@ const StickyHeader = (props) => {
                 <MenuTitleStarting onClick={scrollToTop}>BLM</MenuTitleStarting>
                 <MenuItemSectionStarting>
                     <PlaceHolderBlock></PlaceHolderBlock>
-                    <MenuItemStarting href="/donate">Donate</MenuItemStarting>
-                    <MenuItemStarting href="/donate">Contact</MenuItemStarting>
-                    <MenuItemStarting href="/donate">Vote</MenuItemStarting>
-                    <MenuItemStarting href="/donate">Remember</MenuItemStarting>
+                    <MenuItemStarting onClick={navigateTo("/donate")}>Donate</MenuItemStarting>
+                    <MenuItemStarting onClick={navigateTo("/demand")}>Demand</MenuItemStarting>
+                    <MenuItemStarting onClick={navigateTo("/vote")}>Vote</MenuItemStarting>
+                    <MenuItemStarting onClick={navigateTo("/remember")}>Remember</MenuItemStarting>
                 </MenuItemSectionStarting>
             </StartingMenu>
         )

@@ -157,13 +157,6 @@ export const HeroSummary = styled.span`
 
 `
 
-
-export const Hero2 = styled.div`
-    background: white;
-    width: 100%;
-    height: 5000px;
-`
-
 /** BUTTON STUFF */
 
 export const HeroButtonBody = styled.div`

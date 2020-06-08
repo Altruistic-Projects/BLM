@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageBody, Hero2, SectionTitle, SectionSummary, PageTitle, SectionBody } from "../styledComponents";
+import { PageBody,  SectionTitle, SectionSummary, PageTitle, SectionBody } from "../styledComponents";
 import { InfoCard } from "../components";
 import Config from "../config";
 
@@ -22,7 +22,6 @@ function Donate() {
     <PageBody>
       <PageTitle>Donate to the cause</PageTitle>
       {generateDonationCards(Config.donationData)}
-      <Hero2>Donate</Hero2>
     </PageBody>
   );
 }

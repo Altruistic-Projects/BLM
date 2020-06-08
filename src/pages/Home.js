@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Small, Medium, Large, Hero, Hero2 } from "../styledComponents";
+import { Row, Small, Medium, Large, Hero } from "../styledComponents";
 
 
 function Home() {
