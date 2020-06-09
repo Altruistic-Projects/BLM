@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { MenuItemSectionStarting, FixedMenu, StartingMenu, MenuItemSection, MenuTitleStarting, MenuTitle, MenuItemStarting, MenuItem, Small, Medium, Large, PlaceHolderBlock } from "../styledComponents";
 import { BrowserRouter, withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const StickyHeader = (props) => {
     const [isSticky, setSticky] = useState(false);
@@ -39,7 +40,7 @@ const StickyHeader = (props) => {
     const createFixedMenu = () => {
         return (
             <FixedMenu>
-                <MenuTitle onClick={scrollToTop}>BLM</MenuTitle>
+                <MenuTitle onClick={scrollToTop}><FontAwesomeIcon icon="home"/></MenuTitle>
                 <MenuItemSection>
                     <PlaceHolderBlock></PlaceHolderBlock>
                     <MenuItem onClick={navigateTo("/donate")}>Donate</MenuItem>

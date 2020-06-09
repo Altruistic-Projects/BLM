@@ -7,12 +7,12 @@ import Routes from "./Routes";
 import Config from "./config";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faInfoCircle, faHome } from '@fortawesome/free-solid-svg-icons'
 
 import { Row, Small, Medium, Large, HeroButtonContainer } from "./styledComponents";
 import { StickyHeader, Hero, Button } from "./components";
 
-library.add(fab, faCheckSquare, faInfoCircle)
+library.add(fab, faCheckSquare, faInfoCircle, faHome)
 
 const baseStyles = theme => createGlobalStyle`
   ${reset}

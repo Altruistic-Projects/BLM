@@ -11,7 +11,7 @@ const Dropdown = (props) => {
 
     return (
         <CustomSelect onChange={props.onChange}>
-            {buildOptions(props.templateKeys)}
+            {buildOptions(props.keys)}
         </CustomSelect>
     )
 };

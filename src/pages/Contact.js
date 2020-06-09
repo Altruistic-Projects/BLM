@@ -9,8 +9,8 @@ function Contact(props) {
   // const [template, setTemplate] = useState("DEFUNDLAPD");
   const [name, setName] = useState("[FULL NAME]");
   const [region, setRegion] = useState("[CITY, STATE]");
-  const [template, setTemplate] = useState("DEFUNDLAPD");
-  const [email, setEmail] = useState(config.emailGenerator("DEFUNDLAPD", name, region));
+  const [template, setTemplate] = useState(config.templateKeys[0].key);
+  const [email, setEmail] = useState(config.emailGenerator(config.templateKeys[0].key, name, region));
 
   const updateName = (input) => {
     setName(input.target.value);
@@ -33,7 +33,7 @@ function Contact(props) {
       <PageSummary>Contact those in politics to make the changes we need to see</PageSummary>
       <DropDownBody>
         <label>Choose a Template</label>
-        <Dropdown templateKeys={config.templateKeys} onChange={useTemplate}/>
+        <Dropdown keys={config.templateKeys} onChange={useTemplate}/>
       </DropDownBody>
       <Input label={"Full Name"} onChange={updateName} name="name"/>
       <Input label={"City, State"} onChange={updateRegion} name="city" />

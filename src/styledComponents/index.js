@@ -7,6 +7,10 @@ export const CenteredBold = styled.div`
     margin-bottom: 5px;
 `
 
+export const VoteCenteredBold = styled(CenteredBold )`
+    margin-bottom: 200px;
+`
+
 export const GenericButtonBody = styled.a`
     color: white;
     background-color: black;
@@ -23,6 +27,12 @@ export const GenericButtonBody = styled.a`
     @media only screen and (max-width: 479px) {
         width: 250px;
     }
+`
+
+export const VoteButtonBody = styled(GenericButtonBody)`
+@media only screen and (max-width: 479px) {
+    margin-bottom: 200px;
+}
 `
 
 export const PreviewSection = styled.p`
@@ -198,6 +208,7 @@ export const FixedMenu = styled.div`
     padding: 10px;
     width: 100%;
     box-shadow: 0 4px 6px -6px #222;
+    background-color: rgb(255, 255, 255, 0.8);
 `
 
 export const StartingMenu = styled.div`
@@ -343,4 +354,17 @@ export const CustomSelect = styled.select`
     border-radius: 5px;
     font-size: 15px;
     margin: 5px 0;
+`
+
+export const CustomSelectWrapper = styled.span`
+    > select {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 15px;
+        margin: 5px 0;
+    }
+`
+
+export const VoteDropdown = styled(DropDownBody)`
+    padding: 50px 0 100px;
 `
