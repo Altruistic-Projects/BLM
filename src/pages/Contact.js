@@ -11,8 +11,8 @@ function Contact(props) {
   const [name, setName] = useState("[FULL NAME]");
   const [region, setRegion] = useState("[CITY, STATE]");
   const [petition, setPetition] = useState(false);
-  const [template, setTemplate] = useState(config.templateKeys[0].key);
-  const [email, setEmail] = useState(config.emailGenerator(config.templateKeys[0].key, name, region));
+  const [template, setTemplate] = useState(config.templateKeys.defaultKey.key);
+  const [email, setEmail] = useState(config.emailGenerator(config.templateKeys.defaultKey.key, name, region));
 
   const updateName = (input) => {
     setName(input.target.value);
@@ -38,7 +38,7 @@ function Contact(props) {
       <>
       <DropDownBody>
         <InputLabel>Choose a demand</InputLabel>
-        <Dropdown keys={config.templateKeys} onChange={useTemplate}/>
+        <Dropdown keys={config.templateKeys} onChange={useTemplate} hasOpt/>
       </DropDownBody>
       {!petition && <Input label={"FULL NAME"} onChange={updateName} name="name"/>}
       {!petition && <Input label={"CITY, STATE"} onChange={updateRegion} name="city" />}

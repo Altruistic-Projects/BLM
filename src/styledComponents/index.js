@@ -1,6 +1,10 @@
 import styled, { css, keyframes } from "styled-components";
 import icon from "../assets/blm-icon.png";
 
+export const IconSpacing = styled.span`
+    margin: 0 5px 0 0;
+`
+
 export const White = styled.div`
     color: white;
 `

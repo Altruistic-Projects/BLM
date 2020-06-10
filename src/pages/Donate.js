@@ -20,7 +20,7 @@ const generateDonationCards = (donationData) => {
 function Donate() {
   return (
     <PageBody>
-      <PageTitle>DONATE TO THE CAUSE</PageTitle>
+      <PageTitle>DONATE</PageTitle>
       {generateDonationCards(Config.donationData)}
     </PageBody>
   );
