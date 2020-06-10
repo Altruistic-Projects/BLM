@@ -46,7 +46,7 @@ const StickyHeader = (props) => {
                     <MenuItem onClick={navigateTo("/donate")}>Donate</MenuItem>
                     <MenuItem onClick={navigateTo("/demand")}>Demand</MenuItem>
                     <MenuItem onClick={navigateTo("/vote")}>Vote</MenuItem>
-                    <MenuItem onClick={navigateTo("/remember")}>Remember</MenuItem>
+                    <MenuItem onClick={navigateTo("/resources")}>Literature</MenuItem>
                 </MenuItemSection>
             </FixedMenu>
         )
@@ -61,7 +61,7 @@ const StickyHeader = (props) => {
                     <MenuItemStarting onClick={navigateTo("/donate")}>Donate</MenuItemStarting>
                     <MenuItemStarting onClick={navigateTo("/demand")}>Demand</MenuItemStarting>
                     <MenuItemStarting onClick={navigateTo("/vote")}>Vote</MenuItemStarting>
-                    <MenuItemStarting onClick={navigateTo("/remember")}>Remember</MenuItemStarting>
+                    <MenuItemStarting onClick={navigateTo("/resources")}>Literature</MenuItemStarting>
                 </MenuItemSectionStarting>
             </StartingMenu>
         )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import { Home, Donate, Contact, Vote } from "./pages";
+import { Resources, Donate, Contact, Vote } from "./pages";
 
 const Routes = () => (
     <Switch>
@@ -12,7 +12,7 @@ const Routes = () => (
                 return <Redirect to="/home" />
             }}
         />
-        <Route path="/home" component={Home} />
+        <Route path="/resources" component={Resources} />
         <Route path="/donate" component={Donate} />
         <Route path="/demand" component={Contact} />
         <Route path="/vote" component={Vote} />

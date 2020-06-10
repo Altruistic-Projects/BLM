@@ -30,6 +30,7 @@ const config = {
         { key: "DEFUNDFREMONTPD", text: "Defund the Fremont PD"},
         { key: "DEFUNDLAPD", text: "Defund the LAPD"},
         { key: "DEFUNDNYPD", text: "Defund the NYPD"}
+        // { key: "DEFUNDTHEPOLICE", type: "petition", link: "https://blacklivesmatter.com/defundthepolice/"}
     ],
     voteKeys: {
         AL: "https://www.alabamainteractive.org/sos/voter_registration/voterRegistrationWelcome.action",
@@ -89,6 +90,103 @@ const config = {
         WI: "https://myvote.wi.gov/en-us/RegisterToVote/ref/voteusa",
         WY: "https://sos.wyo.gov/Elections/State/RegisteringToVote.aspx"
     },
+    readingList: [
+        {
+            sectionTitle: "Articles to read",
+            sectionMessage: "Articles about racism, the history of racism, and how to be anti-racist.",
+            titles: [
+                {
+                    title: "America’s Racial Contract Is Killing Us",
+                    briefSummary: "By Adam Serwer | Atlantic (May 8, 2020)",
+                    link: "https://www.theatlantic.com/ideas/archive/2020/05/americas-racial-contract-showing/611389/"
+                },{
+                    title: "Ella Baker and the Black Freedom Movement",
+                    briefSummary: "By Barbara Ransby",
+                    link: "https://drive.google.com/a/glaze0101.com/file/d/0By2bSlBi5slDbXB2enJ0RzN6c3M/view?usp=sharing"
+                },{
+                    title: "My Life as an Undocumented Immigrant",
+                    briefSummary: "By Jose Antonio Vargas | NYT Mag (June 22, 2011)",
+                    link: "https://www.nytimes.com/2011/06/26/magazine/my-life-as-an-undocumented-immigrant.html"
+                },{
+                    title: "The 1619 Project",
+                    briefSummary: "The New York Times Magazine",
+                    link: "https://www.nytimes.com/interactive/2019/08/14/magazine/1619-america-slavery.html"
+                },{
+                    title: "The Combahee River Collective Statement",
+                    briefSummary: "Edited by Barbara Smith | Home Girls, A Black Feminist Anthology",
+                    link: "http://circuitous.org/scraps/combahee.html"
+                },{
+                    title: "The Intersectionality Wars",
+                    briefSummary: "by Jane Coaston | Vox (May 28, 2019)",
+                    link: "https://www.vox.com/the-highlight/2019/5/20/18542843/intersectionality-conservatism-law-race-gender-discrimination"
+                },{
+                    title: "Tips for Creating Effective White Caucus Groups",
+                    briefSummary: "Developed by Craig Elliott PhD",
+                    link: "http://convention.myacpa.org/houston2018/wp-content/uploads/2017/11/Guidelines-for-Effective-White-Caucuses.pdf"
+                },{
+                    title: "Where do I donate? Why is the uprising violent? Should I go protest?",
+                    briefSummary: "by Courtney Martin (June 1, 2020)",
+                    link: "https://medium.com/@cemwrites/where-do-i-donate-why-is-the-uprising-violent-should-i-go-protest-5cefeac37ef9"
+                },{
+                    title: "White Privilege: Unpacking the Invisible Knapsack",
+                    briefSummary: "By Knapsack Peggy McIntosh",
+                    link: "http://convention.myacpa.org/houston2018/wp-content/uploads/2017/11/UnpackingTheKnapsack.pdf"
+                },{
+                    title: "Who Gets to Be Afraid in America?",
+                    briefSummary: "by Dr. Ibram X. Kendi | Atlantic (May 12, 2020)",
+                    link: "https://www.theatlantic.com/ideas/archive/2020/05/ahmaud-arbery/611539/"
+                }
+            ]
+        }
+    ],
+    petitionData: [
+        {
+            sectionTitle: "Justice for those no longer with us",
+            sectionMessage: "Petitions for justice for those that were killed wrongfully",
+            petitions: [
+                {
+                    cause: "BREONNA",
+                    briefSummary: "This one’s dedicated to Breonna Taylor, who was murdered when police wrongfully entered her Kentucky apartment. You can sign the online petition or text “ENOUGH” to 55156.",
+                    link: "https://www.standwithbre.com/"
+                },{
+                    cause: "AHMAUD ARBERY",
+                    briefSummary: "In honor of Ahmaud Arbery, who was killed while jogging—unarmed—in Georgia.",
+                    link: "https://www.change.org/p/human-rights-campaign-justice-for-ahmuad-aubrey-2"
+                },{
+                    cause: "TONY MCDADE",
+                    briefSummary: "The petition seeks justice for Tony McDade, a transgender man who was killed by police in Tallahassee.",
+                    link: "https://www.change.org/p/justice-for-tony-mcdade"
+                },{
+                    cause: "BELLY MUJINGA",
+                    briefSummary: "Belly Mujinga (a railway worker from London) died from COVID-19 after she was denied proper protection as an essential worker.",
+                    link: "https://www.change.org/p/govia-thameslink-justice-for-belly-mujinga-justiceforbellymujinga"
+                }
+            ]
+        },
+        {
+            sectionTitle: "Police Reform",
+            sectionMessage: "Petitions toward reforming or defunding the police",
+            petitions: [
+                {
+                    cause: "#DefundThePolice",
+                    briefSummary: "A petition by the Black Lives Matter organization calling for the national defunding of police. The petition demands investment in our communities and the resources to ensure Black people not only survive, but thrive.",
+                    link: "https://blacklivesmatter.com/defundthepolice/"
+                },{
+                    cause: "NAAPB",
+                    briefSummary: "A petition directed towards law enforcement reform — encourages officials to hold the police accountable.",
+                    link: "https://www.change.org/p/national-action-against-police-brutality-and-murder"
+                },{
+                    cause: "HANDS UP ACT",
+                    briefSummary: "The Hands Up Act is a proposed piece of legislation that suggests officers receive a mandatory 15-year prison sentence for the killing of unarmed men and women.",
+                    link: "https://www.change.org/p/us-senate-hands-up-act"
+                },{
+                    cause: "#WEAREDONEDYING",
+                    briefSummary: "The NAACP launched the petition in honor of George Floyd with the sole purpose of eliminating senseless hate crimes.",
+                    link: "https://www.naacp.org/campaigns/we-are-done-dying/"
+                }
+            ]
+        }
+    ],
     donationData: [
         {
             sectionTitle: "Victim memorial funds",
@@ -113,7 +211,7 @@ const config = {
                     briefSummary: "On Saturday, May 30, 2020, James Scurlock, a 22-year-old African American man, was fatally shot by a bar owner, Jacob Gardner, during George Floyd protests in the Old Market area of Omaha, Nebraska.",
                     link: "https://www.gofundme.com/f/for-james-scurlocks-family"
                 },{
-                    organization: "Tony Mcdade",
+                    organization: "Tony McDade",
                     briefSummary: "On May 27, 2020, after 11 a.m., a 38-year-old African-American transgender man, Tony McDade, was fatally shot in the Leon Arms apartment complex by an officer of Tallahassee Police Department, following the fatal stabbing of Malik Jackson in nearby Saxon Street.",
                     link: "https://www.gofundme.com/f/in-memory-of-tony-mcdade"
                 },{
@@ -128,6 +226,17 @@ const config = {
             ]
         },
         {
+            sectionTitle: "Split Funds",
+            sectionMessage: "Split a donation between 70+ community bail funds, mutual aid funds, and racial justice organizers",
+            organizations: [
+                {
+                    organization: "SPLIT",
+                    briefSummary: "Split a donation to all the bail funds, mutual aid funds, and activist organizations listed on this page, or allocate specific amounts to individual groups.",
+                    link: "https://secure.actblue.com/donate/bail_funds_george_floyd"
+                }
+            ]
+        },
+        {
             sectionTitle: "Legal defense funds and organizations",
             sectionMessage: "Donations will go toward legal aid, education, and financial assistance for black, brown, and other minority groups.",
             organizations: [
@@ -138,7 +247,7 @@ const config = {
                 },{
                     organization: "ACLU",
                     briefSummary: "The American Civil Liberties Union was founded in 1920 and works in the courts, legislatures and communities to defend and preserve the individual rights and liberties guaranteed to all people in this country by the Constitution and laws of the United States. They help in a wide range of topics from Racial justice to Prisoner’s Rights to Privacy & Technology among others.",
-                    link: "https://action.aclu.org/give/now?ms_aff=NAT&initms_aff=NAT&ms=web_horiz_nav_hp&initms=web_horiz_nav_hp&ms_chan=web&initms_chan=web&redirect=node/65102"
+                    link: "https://action.aclu.org/give/fund-every-fight-ahead?cid=7014A000001Zs9uQAC&initms_aff=nat&initms_chan=sem&utm_medium=sem&initms=200114_evergreenun_sem-402136072240-85034108803-aclu-b_segmenta_ggl&utm_source=ggl&utm_campaign=evergreenun&utm_content=200114_sem-402136072240-85034108803-aclu-b_segmenta&ms_aff=nat&ms_chan=sem&ms=200114_evergreenun_sem-402136072240-85034108803-aclu-b_segmenta_ggl&gclid=CjwKCAjw5vz2BRAtEiwAbcVIL2Huw00sbc_87pp-4IKUo_IgCaoxiXe1mduEdF2k_7TBwiBxv3mjghoCXQcQAvD_BwE&gclid=CjwKCAjw5vz2BRAtEiwAbcVIL2Huw00sbc_87pp-4IKUo_IgCaoxiXe1mduEdF2k_7TBwiBxv3mjghoCXQcQAvD_BwE"
                 },{
                     organization: "Legal Rights Center",
                     briefSummary: "The Legal Rights Center is a community-driven nonprofit law firm, specializing in adult criminal and juvenile delinquency defense, restorative justice practices and youth advocacy. The Legal Rights Center runs two programs: Community Defense Program and the Youth: Education, Advocacy & Restorative Services (Y:EARS) Program. While each program has distinct goals and methods, collectively they point to the overall vision of improving the experience of the justice system for communities of color, if not proactively by solving problems that prevent involvement in the justice system in the first place, then certainly after an individual has been swept up into the system.​",

@@ -17,14 +17,16 @@
     "react-scripts": "3.4.1",
     "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.1.1",
-    "styled-reset": "^4.1.5"
+    "styled-reset": "^4.1.5",
+    "viewport-units-buggyfill": "^0.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && s3cmd sync build/* s3://www.blm.earth && echo '🚀  Deployed!'"
+    "deploy": "npm run build && s3cmd sync build/* s3://www.blm.earth && echo '🚀  Deployed!'",
+    "deployTest": "npm run build && s3cmd sync build/* s3://hotpickstocks.com && echo '🚀  Deployed!'"
   },
   "eslintConfig": {
     "extends": "react-app"

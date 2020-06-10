@@ -10,7 +10,7 @@ const generateDonationCards = (donationData) => {
         <SectionTitle>{section.sectionTitle}</SectionTitle>
         <SectionSummary>{section.sectionMessage}</SectionSummary>
         {section.organizations.map(org => {
-          return <InfoCard title={org.organization} content={org.briefSummary} link={org.link}/>
+          return <InfoCard title={org.organization} content={org.briefSummary} link={org.link} linkText={"Donate"}/>
         })}
       </SectionBody>
     )
@@ -20,7 +20,7 @@ const generateDonationCards = (donationData) => {
 function Donate() {
   return (
     <PageBody>
-      <PageTitle>Donate to the cause</PageTitle>
+      <PageTitle>DONATE TO THE CAUSE</PageTitle>
       {generateDonationCards(Config.donationData)}
     </PageBody>
   );

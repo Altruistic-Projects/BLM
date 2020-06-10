@@ -1,12 +1,11 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
-import { InputElement, InputBody } from "../styledComponents";
+import { InputElement, InputBody, InputLabel } from "../styledComponents";
 
 function Input(props) {
 
     return (
         <InputBody>
-            <label for={props.name}>{props.label}</label>
-            <InputElement onChange={props.onChange} name={props.name} id={props.name} />
+            <InputElement placeholder={props.label} onChange={props.onChange} name={props.name} id={props.name} />
         </InputBody>
     );
 }

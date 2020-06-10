@@ -1,10 +1,10 @@
-import Home from "./Home";
+import Resources from "./Resources";
 import Donate from "./Donate";
 import Contact from "./Contact";
 import Vote from "./Vote";
 
 export {
-    Home,
+    Resources,
     Donate,
     Contact,
     Vote

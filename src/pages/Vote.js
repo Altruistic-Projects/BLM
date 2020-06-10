@@ -14,8 +14,8 @@ function Vote() {
 
     return (
         <PageBody>
-            <PageTitle>Vote</PageTitle>
-            <PageSummary>Register to vote. Let your voice be heard.</PageSummary>
+            <PageTitle>REGISTER TO VOTE</PageTitle>
+            <PageSummary>Let your voice be heard in the next election.</PageSummary>
             <VoteDropdown>
                 <label>Select your state</label>
                 <CustomSelectWrapper>

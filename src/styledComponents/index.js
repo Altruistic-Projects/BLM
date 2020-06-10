@@ -1,13 +1,38 @@
 import styled, { css, keyframes } from "styled-components";
 import icon from "../assets/blm-icon.png";
 
+export const White = styled.div`
+    color: white;
+`
+
+export const TitleLeft = styled.span`
+    @media only screen and (max-width: 479px) {
+        width: 200px;
+    }
+`
+
+export const PetitionBody = styled.div`
+    height: 100vh;
+    max-width: 600px;
+    margin: 50px auto;
+`
+
+export const InputLabel = styled.label`
+    font-weight: 550;
+`
+
+export const UnderConstruction = styled.div`
+    padding: 100px 20px;
+    height: calc(100vh + 20px);
+`
+
 export const CenteredBold = styled.div`
     font-weight: bolder;
     text-align: center;
     margin-bottom: 5px;
 `
 
-export const VoteCenteredBold = styled(CenteredBold )`
+export const VoteCenteredBold = styled(CenteredBold)`
     margin-bottom: 200px;
 `
 
@@ -35,7 +60,7 @@ export const VoteButtonBody = styled(GenericButtonBody)`
 }
 `
 
-export const PreviewSection = styled.p`
+export const PreviewSection = styled.div`
     width: 700px;
     margin: 20px auto;
     padding: 20px;
@@ -48,15 +73,20 @@ export const PreviewSection = styled.p`
 `
 
 export const InputElement = styled.input`
-    width: 100%;
-    margin: 5px 0;
+    width: 90%;
+    margin: 5px auto;
     border-radius: 5px;
     height: 20px;
     font-size: 20px;
+    display: block;
+
+    @media only screen and (min-width: 780px) {
+        width: 500px;
+    }
 `
 
 export const InputBody = styled.div`
-    margin: 0 10px 10px;
+    margin: 0 0 10px;
 `
 
 export const Row = styled.div`
@@ -65,7 +95,8 @@ export const Row = styled.div`
 `
 
 export const SectionBody = styled.div`
-    margin-top: 40px;
+    margin: 40px auto 0;
+    max-width: 700px;
 `
 
 export const SectionTitle= styled.h3``
@@ -128,6 +159,7 @@ export const InfoCardDonateLink = styled.div`
 export const HeroBody = styled.div`
     background: black;
     height: 100vh;
+    // height: ${props => props.theme.isInstagram ? "calc(var(--vh, 1vh) * 50)" : "calc(var(--vh, 1vh) * 100)"};
     height: calc(var(--vh, 1vh) * 100);
     text-align: center;
 `
@@ -144,7 +176,7 @@ export const HeroTitle = styled.span`
     transform: translate(-50%, -50%);
 
     @media only screen and (max-width: 479px) {
-        font-size: 65px;
+        font-size: 30px;
         top: 27%;
     }
 `
@@ -161,7 +193,7 @@ export const HeroSummary = styled.span`
     width: 500px;
 
     @media only screen and (max-width: 479px) {
-        top: 53%;
+        top: 40%;
         width: 300px;
     }
 
@@ -192,7 +224,7 @@ export const HeroButtonContainer = styled.div`
     width: 550px;
 
     @media only screen and (max-width: 479px) {
-        top: 80%;
+        top: 70%;
         width: 250px;
     }
 `
@@ -232,7 +264,7 @@ export const MenuTitleStarting = styled.div`
 `
 
 export const MenuTitle = styled(MenuTitleStarting)`
-    color: black;
+    color: black !important;
 `
 
 export const MenuItemStarting = styled.a`
@@ -313,8 +345,8 @@ export const MenuItemSectionStarting = styled(MenuItemSection)`
 //** PAGES Stuff */
 
 export const PageBody = styled.div`
-    margin-top: 100px;
-    padding: 20px;
+    margin-top: 80px;
+    padding: 20px 40px;
 `
 
 
@@ -343,10 +375,18 @@ export const Large = styled.div`
     }
 `
 export const DropDownBody = styled.div`
-    width: calc(100% - 10px);
-    margin: 35px 0;
-    height: 25px;
-    padding: 5px 0 0 10px;
+    // margin: 35px 0;
+    // height: 25px;
+    // padding: 20px;
+
+    padding: 12px;
+    margin: 10px auto;
+    width: 500px;
+    display: block;
+
+    @media only screen and (max-width: 479px) {
+        width: auto;
+    }
 `
 
 export const CustomSelect = styled.select`
@@ -366,5 +406,5 @@ export const CustomSelectWrapper = styled.span`
 `
 
 export const VoteDropdown = styled(DropDownBody)`
-    padding: 50px 0 100px;
+    padding: 50px 0 50px;
 `
