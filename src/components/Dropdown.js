@@ -4,7 +4,6 @@ import { CustomSelect } from "../styledComponents";
 const Dropdown = (props) => {
 
     const buildOptions = (templateKeys) => {
-        console.log(templateKeys)
         if(props.hasOpt) {
             return templateKeys.states.map(s => {
                 return (

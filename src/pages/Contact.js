@@ -11,8 +11,8 @@ function Contact(props) {
   const [name, setName] = useState("[FULL NAME]");
   const [region, setRegion] = useState("[CITY, STATE]");
   const [petition, setPetition] = useState(false);
-  const [template, setTemplate] = useState(config.templateKeys.defaultKey.key);
-  const [email, setEmail] = useState(config.emailGenerator(config.templateKeys.defaultKey.key, name, region));
+  const [template, setTemplate] = useState(config.templateKeys.defaultKey);
+  const [email, setEmail] = useState(config.emailGenerator(config.templateKeys.defaultKey, name, region));
 
   const updateName = (input) => {
     setName(input.target.value);
